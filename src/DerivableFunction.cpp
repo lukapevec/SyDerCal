@@ -19,9 +19,11 @@ DerivableFunction *DerivableFunction::operator+(const DerivableFunction *other) 
 }
 
 DerivableFunction *DerivableFunction::Mul(const DerivableFunction *other) const {
-  return new MulFunction(this, other);
+  // TODO
+  return nullptr;
 }
 
 DerivableFunction *DerivableFunction::operator*(const DerivableFunction *other) const {
-  return Mul(other);
+  // TODO
+  return nullptr;
 }

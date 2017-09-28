@@ -3,13 +3,16 @@
 MulFunction::MulFunction(const DerivableFunction *left, const DerivableFunction *right) : left_(left), right_(right) {}
 
 double MulFunction::Evaluate(double x) const {
-  return left_->Evaluate(x) * right_->Evaluate(x);
+  // TODO
+  return nullptr;
 }
 
 string MulFunction::ToString() const {
-  return "(" + left_->ToString() + " * " + right_->ToString() + ")";
+  // TODO
+  return nullptr;
 }
 
 DerivableFunction *MulFunction::Derive() const {
-  return *(*left_->Derive() * right_) + *left_ * right_->Derive();
+  // TODO
+  return nullptr;
 }
