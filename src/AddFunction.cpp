@@ -10,6 +10,8 @@ string AddFunction::ToString() const {
   return "(" + left_->ToString() + " + " + right_->ToString() + ")";
 }
 
+// Derivation of the addition
+// (x+y)' = x' + y'
 DerivableFunction *AddFunction::Derive() const {
   return *left_->Derive() + right_->Derive();
 }
