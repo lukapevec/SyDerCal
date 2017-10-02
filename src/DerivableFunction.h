@@ -15,8 +15,12 @@ class DerivableFunction {
   double operator()(double) const;
   DerivableFunction *Add(const DerivableFunction *) const;
   DerivableFunction *operator+(const DerivableFunction *) const;
+  DerivableFunction *Sub(const DerivableFunction *) const;
+  DerivableFunction *operator-(const DerivableFunction *) const;
   DerivableFunction *Mul(const DerivableFunction *) const;
   DerivableFunction *operator*(const DerivableFunction *) const;
+  DerivableFunction *Div(const DerivableFunction *) const;
+  DerivableFunction *operator/(const DerivableFunction *) const;
 };
 
 #endif //SYDERCAL_DERIVABLEFUNCTION_H

@@ -11,8 +11,9 @@
 using namespace std;
 
 int main() {
-  auto *func1 = *(new Exp(new X())) + new X();
-  auto *func2 = (new Exp(new X()))->Mul(new X());
+  // first set of functions
+  auto *func1 = *(*(new Exp(new X())) + new X()) - new Sin(new X());
+  auto *func2 = ((new Exp(new X()))->Mul(new X()))->Mul(new Cos(new X()));
   cout << "f(x) = " << (*func1).ToString() << endl;
   cout << "g(x) = " << (string) *func2 << endl;
   cout << "f(0) = " << func1->Evaluate(0) << endl;
@@ -20,6 +21,7 @@ int main() {
   cout << "g(0) = " << func2->Evaluate(0) << endl;
   cout << "g(1) = " << (*func2)(1) << endl;
 
+  // their derivations
   auto *d_func = func1->Derive();
   auto *d_alt_func = func2->Derive();
   cout << "f'(x) = " << (string) *d_func << endl;
@@ -30,7 +32,7 @@ int main() {
   cout << "g'(1) = " << (*d_alt_func)(1) << endl;
 
   // sin(x) operation test
-  auto *func3 = new Sin(new X());
+  auto *func3 = (new Sin(new X()))->Div(new X());
   cout << endl;
   cout << "h(x) = " << (string) *func3 << endl;
   cout << "h(0) = " << func3->Evaluate(0) << endl;
