@@ -21,6 +21,8 @@ class DerivableFunction {
   DerivableFunction *operator*(const DerivableFunction *) const;
   DerivableFunction *Div(const DerivableFunction *) const;
   DerivableFunction *operator/(const DerivableFunction *) const;
+  DerivableFunction *Pow(const DerivableFunction *) const;
+  DerivableFunction *operator^(const DerivableFunction *) const;
 };
 
 #endif //SYDERCAL_DERIVABLEFUNCTION_H

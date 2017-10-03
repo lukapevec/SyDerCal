@@ -42,8 +42,9 @@ int main() {
   cout << "h'(0) = " << (*d_func3)(0) << endl;
   cout << "h'(pi/2) = " << d_func3->Evaluate(M_PI/2) << endl;
 
-  // cos(x) operation test
-  auto *func4 = new Cos(new X());
+  // pow() operation test
+  //auto *func4 = new Cos(new X());
+  auto *func4 = (new X())->Pow(new Const(3));
   cout << endl;
   cout << "k(x) = " << (string) *func4 << endl;
   cout << "k(0) = " << func4->Evaluate(0) << endl;

@@ -3,6 +3,7 @@
 #include "MulFunction.h"
 #include "SubFunction.h"
 #include "DivFunction.h"
+#include "PowFunction.h"
 
 double DerivableFunction::operator()(double x) const {
   return Evaluate(x);
@@ -40,4 +41,12 @@ DerivableFunction *DerivableFunction::Div(const DerivableFunction *other) const 
 }
 DerivableFunction *DerivableFunction::operator/(const DerivableFunction *other) const {
   return Div(other);
+}
+
+DerivableFunction *DerivableFunction::Pow(const DerivableFunction *other) const {
+  return new PowFunction(this, other);
+}
+
+DerivableFunction *DerivableFunction::operator^(const DerivableFunction *other) const {
+  return Pow(other);
 }
