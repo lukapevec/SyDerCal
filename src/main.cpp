@@ -3,10 +3,12 @@
 #include <iostream>
 #include <cmath>
 
+#include "Const.h"
+#include "X.h"
 #include "Exp.h"
 #include "Sin.h"
 #include "Cos.h"
-#include "X.h"
+
 
 using namespace std;
 
