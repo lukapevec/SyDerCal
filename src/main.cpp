@@ -3,11 +3,11 @@
 #include <iostream>
 #include <cmath>
 
-#include "Const.h"
-#include "X.h"
-#include "Exp.h"
-#include "Sin.h"
-#include "Cos.h"
+#include "../include/Const.h"
+#include "../include/X.h"
+#include "../include/Exp.h"
+#include "../include/Sin.h"
+#include "../include/Cos.h"
 
 
 using namespace std;

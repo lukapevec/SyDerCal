@@ -1,6 +1,6 @@
 #include <cmath> // allow the math operation of sin
 
-#include "Sin.h"
+#include "../include/Sin.h"
 
 Sin::Sin(const DerivableFunction *argument) : argument_(argument) {}
 

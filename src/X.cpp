@@ -1,5 +1,5 @@
-#include "X.h"
-#include "Const.h"
+#include "../include/X.h"
+#include "../include/Const.h"
 
 string X::ToString() const {
   return "X";

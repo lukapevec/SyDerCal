@@ -1,9 +1,9 @@
-#include "DerivableFunction.h"
-#include "AddFunction.h"
-#include "MulFunction.h"
-#include "SubFunction.h"
-#include "DivFunction.h"
-#include "PowFunction.h"
+#include "../include/DerivableFunction.h"
+#include "../include/func/AddFunction.h"
+#include "../include/func/MulFunction.h"
+#include "../include/func/SubFunction.h"
+#include "../include/func/DivFunction.h"
+#include "../include/func/PowFunction.h"
 
 double DerivableFunction::operator()(double x) const {
   return Evaluate(x);

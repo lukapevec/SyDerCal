@@ -1,7 +1,7 @@
 #ifndef SYDERCAL_SUBFUNCTION_H
 #define SYDERCAL_SUBFUNCTION_H
 
-#include "DerivableFunction.h"
+#include "../DerivableFunction.h"
 
 class SubFunction : public DerivableFunction{
  private:

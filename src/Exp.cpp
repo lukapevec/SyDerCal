@@ -1,6 +1,6 @@
 #include <cmath>
 
-#include "Exp.h"
+#include "../include/Exp.h"
 
 Exp::Exp(const DerivableFunction *argument) : argument_(argument) {}
 

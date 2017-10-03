@@ -3,5 +3,5 @@ project(SyDerCal)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp DerivableFunction.cpp DerivableFunction.h AddFunction.cpp AddFunction.h Exp.cpp Exp.h MulFunction.cpp MulFunction.h X.cpp X.h Const.cpp Const.h Sin.cpp Sin.h Cos.cpp Cos.h SubFunction.cpp SubFunction.h DivFunction.cpp DivFunction.h PowFunction.cpp PowFunction.h)
-add_executable(SyDerCal ${SOURCE_FILES} Sin.cpp Sin.h Cos.cpp Cos.h SubFunction.cpp SubFunction.h DivFunction.cpp DivFunction.h PowFunction.cpp PowFunction.h)
+set(SOURCE_FILES main.cpp DerivableFunction.cpp ../include/DerivableFunction.h func/AddFunction.cpp ../include/func/AddFunction.h Exp.cpp ../include/Exp.h func/MulFunction.cpp ../include/func/MulFunction.h X.cpp ../include/X.h Const.cpp ../include/Const.h Sin.cpp ../include/Sin.h Cos.cpp ../include/Cos.h func/SubFunction.cpp ../include/func/SubFunction.h func/DivFunction.cpp ../include/func/DivFunction.h func/PowFunction.cpp ../include/func/PowFunction.h)
+add_executable(SyDerCal ${SOURCE_FILES} Sin.cpp ../include/Sin.h Cos.cpp ../include/Cos.h func/SubFunction.cpp ../include/func/SubFunction.h func/DivFunction.cpp ../include/func/DivFunction.h func/PowFunction.cpp ../include/func/PowFunction.h)

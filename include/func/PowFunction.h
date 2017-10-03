@@ -1,7 +1,7 @@
 #ifndef SYDERCAL_POWFUNCTION_H
 #define SYDERCAL_POWFUNCTION_H
 
-#include "DerivableFunction.h"
+#include "../DerivableFunction.h"
 
 class PowFunction : public DerivableFunction{
  private:

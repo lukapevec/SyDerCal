@@ -1,6 +1,6 @@
 #include <cmath>
 
-#include "Cos.h"
+#include "../include/Cos.h"
 
 Cos::Cos(const DerivableFunction *argument) : argument_(argument) {}
 

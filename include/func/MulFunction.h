@@ -1,7 +1,7 @@
 #ifndef SYDERCAL_MULFUNCTION_H
 #define SYDERCAL_MULFUNCTION_H
 
-#include "DerivableFunction.h"
+#include "../DerivableFunction.h"
 
 class MulFunction : public DerivableFunction {
  private:

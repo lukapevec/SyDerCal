@@ -1,7 +1,7 @@
 #include "math.h"
 
-#include "PowFunction.h"
-#include "Const.h"
+#include "../../include/func/PowFunction.h"
+#include "../../include/Const.h"
 
 PowFunction::PowFunction(const DerivableFunction *base, const DerivableFunction *exponent) :
     base_(base), exponent_(exponent) {
