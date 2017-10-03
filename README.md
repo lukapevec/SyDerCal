@@ -26,6 +26,6 @@ Derivation | `Derive()` |
 
 ```objectivec
 // example functions
-auto *funcClasic = (new Exp(new X()))->Sub(new X())
+auto *funcClasic = (new Exp(new X()))->Sub(new X());
 auto *funcOperator = *new Exp(new X()) - new X(); 
 ```
