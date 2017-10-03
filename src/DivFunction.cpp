@@ -7,6 +7,7 @@ DivFunction::DivFunction(const DerivableFunction *left, const DerivableFunction 
 double DivFunction::Evaluate(double x) const {
   return left_->Evaluate(x) / right_->Evaluate(x);
 }
+
 string DivFunction::ToString() const {
   return "(" + left_->ToString() + " / " + right_->ToString() + ")";
 }

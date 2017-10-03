@@ -10,8 +10,8 @@ class DivFunction : public DerivableFunction{
  public:
   DivFunction(const DerivableFunction*, const DerivableFunction*);
   double Evaluate(double d) const override;
-  DerivableFunction *Derive() const override;
   string ToString() const override;
+  DerivableFunction *Derive() const override;
 };
 
 #endif //SYDERCAL_DIVFUNCTION_H
