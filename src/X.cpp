@@ -2,7 +2,7 @@
 #include "../include/Const.h"
 
 string X::ToString() const {
-  return "X";
+  return "x";
 }
 
 DerivableFunction *X::Derive() const {
