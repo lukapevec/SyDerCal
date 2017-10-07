@@ -8,6 +8,7 @@ class DerivableFunction {
  protected:
   DerivableFunction() = default;
  public:
+  virtual ~DerivableFunction() = default;
   virtual DerivableFunction *Derive() const = 0;
   virtual string ToString() const = 0;
   explicit operator string() const;

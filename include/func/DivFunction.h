@@ -1,12 +1,9 @@
 #ifndef SYDERCAL_DIVFUNCTION_H
 #define SYDERCAL_DIVFUNCTION_H
 
-#include "../DerivableFunction.h"
+#include "../BinaryFunction.h"
 
-class DivFunction : public DerivableFunction{
- private:
-  const DerivableFunction* left_;
-  const DerivableFunction* right_;
+class DivFunction : public BinaryFunction{
  public:
   DivFunction(const DerivableFunction*, const DerivableFunction*);
   double Evaluate(double d) const override;

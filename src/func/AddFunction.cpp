@@ -1,7 +1,7 @@
 #include "../../include/func/AddFunction.h"
 
 AddFunction::AddFunction(const DerivableFunction *left, const DerivableFunction *right) :
-    left_(left), right_(right) {
+    BinaryFunction(left, right) {
 }
 
 double AddFunction::Evaluate(double x) const {

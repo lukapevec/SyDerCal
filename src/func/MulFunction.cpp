@@ -1,7 +1,7 @@
 #include "../../include/func/MulFunction.h"
 
-MulFunction::MulFunction(const DerivableFunction *left, const DerivableFunction *right):
-    left_(left), right_(right) {
+MulFunction::MulFunction(const DerivableFunction *left, const DerivableFunction *right) :
+  BinaryFunction(left, right) {
 }
 
 double MulFunction::Evaluate(double x) const {
