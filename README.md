@@ -5,8 +5,8 @@ Framework for calculation of symbolic derivations
 - Constant (`Const.h`)
 - Variable (`X.h`)
 - Exponential (`Exp.h`)
-- Sinus (`Sin.h`)
-- Cosinus (`Cos.h`)
+- Sine (`Sin.h`)
+- Cosine (`Cos.h`)
 
 ```objectivec
 // example objects
