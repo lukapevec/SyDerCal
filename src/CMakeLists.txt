@@ -15,5 +15,5 @@ set(SOURCE_FILES main.cpp
         func/SubFunction.cpp ../include/func/SubFunction.h
         func/DivFunction.cpp ../include/func/DivFunction.h
         func/PowFunction.cpp ../include/func/PowFunction.h
-        MulSimplifier.cpp ../include/MulSimplifier.h)
+        )
 add_executable(SyDerCal ${SOURCE_FILES})
