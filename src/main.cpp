@@ -7,8 +7,6 @@
 #include "../include/X.h"
 #include "../include/Exp.h"
 #include "../include/Sin.h"
-#include "../include/Cos.h"
-
 
 using namespace std;
 
@@ -38,11 +36,11 @@ int main() {
   cout << endl;
   cout << "h(x) = " << (string) *func3 << endl;
   cout << "h(0) = " << func3->Evaluate(0) << endl;
-  cout << "h(pi/2) = " << (*func3)(M_PI/2) << endl;
+  cout << "h(pi/2) = " << (*func3)(M_PI / 2) << endl;
   auto *d_func3 = func3->Derive();
   cout << "h'(x) = " << (string) *d_func3 << endl;
   cout << "h'(0) = " << (*d_func3)(0) << endl;
-  cout << "h'(pi/2) = " << d_func3->Evaluate(M_PI/2) << endl;
+  cout << "h'(pi/2) = " << d_func3->Evaluate(M_PI / 2) << endl;
 
   // pow() operation test
   //auto *func4 = new Cos(new X());
@@ -50,11 +48,22 @@ int main() {
   cout << endl;
   cout << "k(x) = " << (string) *func4 << endl;
   cout << "k(0) = " << func4->Evaluate(0) << endl;
-  cout << "k(pi/2) = " << (*func4)(M_PI/2) << endl;
+  cout << "k(pi/2) = " << (*func4)(M_PI / 2) << endl;
   auto *d_func4 = func4->Derive();
   cout << "k'(x) = " << (string) *d_func4 << endl;
   cout << "k'(0) = " << (*d_func4)(0) << endl;
-  cout << "k'(pi/2) = " << (*d_func4)(M_PI/2) << endl;
+  cout << "k'(pi/2) = " << (*d_func4)(M_PI / 2) << endl;
 
+  // simplify test 1
+  auto *func5 = (new Const(1))->Mul(new X())->Mul(new Const(1));
+  cout << "s1(x) = " << (string) *func5 << " = " << (string) *func5->Simplify() << endl;
+  auto *func6 = (new Const(1))->Add((new Const(1))->Mul(new X())->Mul(new Const(1)));
+  cout << "s2(x) = " << (string) *func6 << " = " << (string) *func6->Simplify() << endl;
+
+  // simplify test 2
+  auto *func7 = (new Const(0))->Mul(new X())->Mul(new Const(1));
+  cout << "s3(x) = " << (string) *func7 << " = " << (string) *func7->Simplify() << endl;
+  auto *func8 = (new Const(1))->Add((new Const(1))->Mul(new X())->Mul(new Const(0)));
+  cout << "s4(x) = " << (string) *func8 << " = " << (string) *func8->Simplify() << endl;
   return 0;
 }

@@ -50,3 +50,8 @@ DerivableFunction *DerivableFunction::Pow(const DerivableFunction *other) const 
 DerivableFunction *DerivableFunction::operator^(const DerivableFunction *other) const {
   return Pow(other);
 }
+
+DerivableFunction *DerivableFunction::Simplify() const {
+  return const_cast<DerivableFunction *>(this);
+}
+

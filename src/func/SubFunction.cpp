@@ -17,3 +17,7 @@ string SubFunction::ToString() const {
 DerivableFunction *SubFunction::Derive() const {
   return *left_->Derive() - right_->Derive();
 }
+
+BinaryFunction *SubFunction::NewInstance(const DerivableFunction *left, const DerivableFunction *right) const {
+  return new SubFunction(left, right);
+}

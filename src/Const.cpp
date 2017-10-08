@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Const::Const(double c) : c_(c) { }
+Const::Const(double c) : c_(c) {}
 
 string Const::ToString() const {
   ostringstream oss;

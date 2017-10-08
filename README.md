@@ -8,7 +8,7 @@ Framework for calculation of symbolic derivations
 - Sine (`Sin.h`)
 - Cosine (`Cos.h`)
 
-```objectivec
+```cpp
 // example objects
 auto *func = new Exp(new X());
 ```
@@ -24,8 +24,11 @@ String expresion | `ToString()` | `string()`
 Evaluation | `Evaluate()` | `()`
 Derivation | `Derive()` | 
 
-```objectivec
+```cpp
 // example functions
 auto *funcClasic = (new Exp(new X()))->Sub(new X());
 auto *funcOperator = *new Exp(new X()) - new X(); 
 ```
+
+#### Experimental stuff:
+Expression simplification.

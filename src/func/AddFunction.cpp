@@ -17,3 +17,7 @@ string AddFunction::ToString() const {
 DerivableFunction *AddFunction::Derive() const {
   return *left_->Derive() + right_->Derive();
 }
+
+BinaryFunction *AddFunction::NewInstance(const DerivableFunction *left, const DerivableFunction *right) const {
+  return new AddFunction(left, right);
+}

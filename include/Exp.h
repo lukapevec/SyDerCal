@@ -5,9 +5,9 @@
 
 class Exp : public DerivableFunction {
  private:
-  const DerivableFunction* argument_;
+  const DerivableFunction *argument_;
  public:
-  explicit Exp(const DerivableFunction* argument);
+  explicit Exp(const DerivableFunction *argument);
   string ToString() const override;
   DerivableFunction *Derive() const override;
   double Evaluate(double d) const override;

@@ -14,6 +14,7 @@ class DerivableFunction {
   explicit operator string() const;
   virtual double Evaluate(double) const = 0;
   double operator()(double) const;
+  virtual DerivableFunction *Simplify() const;
   DerivableFunction *Add(const DerivableFunction *) const;
   DerivableFunction *operator+(const DerivableFunction *) const;
   DerivableFunction *Sub(const DerivableFunction *) const;
@@ -24,7 +25,6 @@ class DerivableFunction {
   DerivableFunction *operator/(const DerivableFunction *) const;
   DerivableFunction *Pow(const DerivableFunction *) const;
   DerivableFunction *operator^(const DerivableFunction *) const;
-  DerivableFunction *Simplify(); // TODO
 };
 
 #endif //SYDERCAL_DERIVABLEFUNCTION_H
