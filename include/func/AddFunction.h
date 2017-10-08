@@ -8,7 +8,9 @@ class AddFunction : public BinaryFunction {
   AddFunction(const DerivableFunction *, const DerivableFunction *);
   double Evaluate(double) const override;
   string ToString() const override;
-  DerivableFunction* Derive() const override;
+  DerivableFunction *Derive() const override;
+ protected:
+  BinaryFunction *NewInstance(const DerivableFunction *, const DerivableFunction *) const override;
 };
 
 #endif //SYDERCAL_ADDFUNCTION_H

@@ -3,12 +3,12 @@
 
 #include "../DerivableFunction.h"
 
-class PowFunction : public DerivableFunction{
+class PowFunction : public DerivableFunction {
  private:
-  const DerivableFunction* base_;
-  const DerivableFunction* exponent_;
+  const DerivableFunction *base_;
+  const DerivableFunction *exponent_;
  public:
-  PowFunction(const DerivableFunction* base, const DerivableFunction* exponent);
+  PowFunction(const DerivableFunction *base, const DerivableFunction *exponent);
   double Evaluate(double x) const override;
   string ToString() const override;
   DerivableFunction *Derive() const override;

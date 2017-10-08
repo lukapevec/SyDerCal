@@ -17,6 +17,10 @@ string DivFunction::ToString() const {
 DerivableFunction *DivFunction::Derive() const {
   auto num1 = *left_->Derive() * right_; // x'y
   auto num2 = *left_ * right_->Derive(); // xy'
-  auto den  = right_->Mul(right_); // y*y
+  auto den = right_->Mul(right_); // y*y
   return num1->Sub(num2)->Div(den);
+}
+
+BinaryFunction *DivFunction::NewInstance(const DerivableFunction *left, const DerivableFunction *right) const {
+  return new DivFunction(left, right);
 }
