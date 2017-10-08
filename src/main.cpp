@@ -38,7 +38,7 @@ int main() {
   cout << "h(0) = " << func3->Evaluate(0) << endl;
   cout << "h(pi/2) = " << (*func3)(M_PI / 2) << endl;
   auto *d_func3 = func3->Derive();
-  cout << "h'(x) = " << (string) *d_func3 << endl;
+  cout << "h'(x) = " << (string) *d_func3 << " = " << (string) *d_func3->Simplify() << endl;
   cout << "h'(0) = " << (*d_func3)(0) << endl;
   cout << "h'(pi/2) = " << d_func3->Evaluate(M_PI / 2) << endl;
 

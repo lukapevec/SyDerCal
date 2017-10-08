@@ -9,6 +9,7 @@ class AddFunction : public BinaryFunction {
   double Evaluate(double) const override;
   string ToString() const override;
   DerivableFunction *Derive() const override;
+  DerivableFunction *Simplify() const override;
  protected:
   BinaryFunction *NewInstance(const DerivableFunction *, const DerivableFunction *) const override;
 };
