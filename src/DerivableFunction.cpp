@@ -36,9 +36,11 @@ DerivableFunction *DerivableFunction::Mul(const DerivableFunction *other) const 
 DerivableFunction *DerivableFunction::operator*(const DerivableFunction *other) const {
   return Mul(other);
 }
+
 DerivableFunction *DerivableFunction::Div(const DerivableFunction *other) const {
   return new DivFunction(this, other);
 }
+
 DerivableFunction *DerivableFunction::operator/(const DerivableFunction *other) const {
   return Div(other);
 }

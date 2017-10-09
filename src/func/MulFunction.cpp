@@ -1,5 +1,7 @@
 #include "../../include/func/MulFunction.h"
 #include "../../include/Const.h"
+#include "../../include/X.h"
+#include "../../include/func/PowFunction.h"
 
 MulFunction::MulFunction(const DerivableFunction *left, const DerivableFunction *right) :
     BinaryFunction(left, right) {
@@ -50,6 +52,14 @@ DerivableFunction *MulFunction::Simplify() const {
       return new Const(0);
     }
   }
+
+  // simplification x * x = x^2
+  auto *con_left_x = dynamic_cast<X *> (sim_left);
+  auto *con_right_x = dynamic_cast<X *> (sim_right);
+  if (con_left_x != nullptr && con_right_x != nullptr) {
+    return new PowFunction(new X(), new Const(2));
+  }
+
   return new MulFunction(sim_left, sim_right);
 }
 

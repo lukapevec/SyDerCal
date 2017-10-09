@@ -55,6 +55,7 @@ int main() {
   cout << "k'(pi/2) = " << (*d_func4)(M_PI / 2) << endl;
 
   // simplify test 1
+  cout << endl;
   auto *func5 = (new Const(1))->Mul(new X())->Mul(new Const(1));
   cout << "s1(x) = " << (string) *func5 << " = " << (string) *func5->Simplify() << endl;
 
