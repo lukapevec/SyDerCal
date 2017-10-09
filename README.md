@@ -41,7 +41,7 @@ auto *funcOperator = *new Exp(new X()) - new X();
 ## Experimental simplification (experimental):
 
 - [x] 0 + x = x + 0 = x
-- [ ] 0 - x = x - 0 = x
+- [x] x - 0 = x
 - [x] 1 * x = x * 1 = x
 - [ ] x / 1 = x
 - [ ] x * x = x^2

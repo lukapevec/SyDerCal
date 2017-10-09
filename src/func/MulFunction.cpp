@@ -22,6 +22,8 @@ DerivableFunction *MulFunction::Derive() const {
 DerivableFunction *MulFunction::Simplify() const {
   auto *sim_left = left_->Simplify();
   auto *sim_right = right_->Simplify();
+
+  // simplification 1 * x = x and 0 * x = 0
   auto *con_left = dynamic_cast<Const *> (sim_left);
   if (con_left != nullptr) {
     auto value = con_left->Evaluate(0);
@@ -34,6 +36,8 @@ DerivableFunction *MulFunction::Simplify() const {
       return new Const(0);
     }
   }
+
+  // simplification x * 1 = x and  x * 0 = 0
   auto *con_right = dynamic_cast<Const *> (sim_right);
   if (con_right != nullptr) {
     auto value = con_right->Evaluate(0);
