@@ -1,7 +1,7 @@
 #ifndef SYDERCAL_SUBFUNCTION_H
 #define SYDERCAL_SUBFUNCTION_H
 
-#include "../BinaryFunction.h"
+#include "BinaryFunction.h"
 
 class SubFunction : public BinaryFunction {
  public:

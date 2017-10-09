@@ -1,5 +1,5 @@
 #include "../../include/binary/SubFunction.h"
-#include "../../include/Const.h"
+#include "../../include/unary/Const.h"
 
 SubFunction::SubFunction(const DerivableFunction *left, const DerivableFunction *right) :
     BinaryFunction(left, right) {

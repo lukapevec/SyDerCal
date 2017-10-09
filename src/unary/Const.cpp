@@ -1,14 +1,14 @@
 #include <sstream>
 
-#include "../include/Const.h"
+#include "../../include/unary/Const.h"
 
 using namespace std;
 
-Const::Const(double c) : c_(c) {}
+Const::Const(double argument) : argument_(argument) {}
 
 string Const::ToString() const {
   ostringstream oss;
-  oss << c_;
+  oss << argument_;
   return oss.str();
 }
 
@@ -17,5 +17,7 @@ DerivableFunction *Const::Derive() const {
 }
 
 double Const::Evaluate(double) const {
-  return c_;
+  return argument_;
 }
+
+

@@ -1,5 +1,5 @@
 #include "../../include/binary/DivFunction.h"
-#include "../../include/Const.h"
+#include "../../include/unary/Const.h"
 
 DivFunction::DivFunction(const DerivableFunction *left, const DerivableFunction *right) :
     BinaryFunction(left, right) {

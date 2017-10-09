@@ -1,8 +1,8 @@
 #include <cmath>
 
-#include "../include/Cos.h"
+#include "../../include/unary/Cos.h"
 
-Cos::Cos(const DerivableFunction *argument) : argument_(argument) {}
+Cos::Cos(const DerivableFunction *argument) : UnaryFunction(argument) {}
 
 string Cos::ToString() const {
   return "cos(" + argument_->ToString() + ")";
@@ -15,5 +15,9 @@ DerivableFunction *Cos::Derive() const {
 
 double Cos::Evaluate(double d) const {
   return cos(d);
+}
+
+UnaryFunction *Cos::NewInstance(const DerivableFunction *argument) const {
+  return new Cos(argument);
 }
 

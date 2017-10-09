@@ -1,7 +1,7 @@
 #include "cmath"
 
 #include "../../include/binary/PowFunction.h"
-#include "../../include/Const.h"
+#include "../../include/unary/Const.h"
 
 PowFunction::PowFunction(const DerivableFunction *base, const DerivableFunction *exponent) :
     BinaryFunction(base, exponent) {

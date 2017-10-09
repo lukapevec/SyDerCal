@@ -3,10 +3,10 @@
 #include <iostream>
 #include <cmath>
 
-#include "../include/Const.h"
-#include "../include/X.h"
-#include "../include/Exp.h"
-#include "../include/Sin.h"
+#include "../include/unary/Const.h"
+#include "../include/nullary/X.h"
+#include "../include/unary/Exp.h"
+#include "../include/unary/Sin.h"
 
 using namespace std;
 

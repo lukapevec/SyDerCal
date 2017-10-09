@@ -1,7 +1,7 @@
 #ifndef SYDERCAL_DIVFUNCTION_H
 #define SYDERCAL_DIVFUNCTION_H
 
-#include "../BinaryFunction.h"
+#include "BinaryFunction.h"
 
 class DivFunction : public BinaryFunction {
  public:

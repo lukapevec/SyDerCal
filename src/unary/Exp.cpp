@@ -1,8 +1,8 @@
 #include <cmath>
 
-#include "../include/Exp.h"
+#include "../../include/unary/Exp.h"
 
-Exp::Exp(const DerivableFunction *argument) : argument_(argument) {}
+Exp::Exp(const DerivableFunction *argument) : UnaryFunction(argument) {}
 
 string Exp::ToString() const {
   return "exp(" + argument_->ToString() + ")";
@@ -15,4 +15,8 @@ DerivableFunction *Exp::Derive() const {
 
 double Exp::Evaluate(double d) const {
   return exp(d);
+}
+
+UnaryFunction *Exp::NewInstance(const DerivableFunction *argument) const {
+  return new Exp(argument);
 }

@@ -1,8 +1,8 @@
 #include <cmath> // allow the math operation of sin
 
-#include "../include/Sin.h"
+#include "../../include/unary/Sin.h"
 
-Sin::Sin(const DerivableFunction *argument) : argument_(argument) {}
+Sin::Sin(const DerivableFunction *argument) : UnaryFunction(argument) {}
 
 string Sin::ToString() const {
   return "sin(" + argument_->ToString() + ")";
@@ -15,4 +15,8 @@ DerivableFunction *Sin::Derive() const {
 
 double Sin::Evaluate(double d) const {
   return sin(d);
+}
+
+UnaryFunction *Sin::NewInstance(const DerivableFunction *other) const {
+  return new Sin(other);
 }

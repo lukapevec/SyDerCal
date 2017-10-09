@@ -1,5 +1,5 @@
 #include "../../include/binary/AddFunction.h"
-#include "../../include/Const.h"
+#include "../../include/unary/Const.h"
 
 AddFunction::AddFunction(const DerivableFunction *left, const DerivableFunction *right) :
     BinaryFunction(left, right) {

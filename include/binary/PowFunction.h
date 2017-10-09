@@ -1,7 +1,7 @@
 #ifndef SYDERCAL_POWFUNCTION_H
 #define SYDERCAL_POWFUNCTION_H
 
-#include "../BinaryFunction.h"
+#include "BinaryFunction.h"
 
 class PowFunction : public BinaryFunction {
  public:

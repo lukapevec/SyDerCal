@@ -1,7 +1,7 @@
 #ifndef SYDERCAL_MULFUNCTION_H
 #define SYDERCAL_MULFUNCTION_H
 
-#include "../BinaryFunction.h"
+#include "BinaryFunction.h"
 
 class MulFunction : public BinaryFunction {
  public:

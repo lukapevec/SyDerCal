@@ -1,18 +1,18 @@
 #ifndef SYDERCAL_COS_H
 #define SYDERCAL_COS_H
 
-#include "DerivableFunction.h"
-#include "Sin.h"
 #include "Const.h"
+#include "UnaryFunction.h"
+#include "Sin.h"
 
-class Cos : public DerivableFunction {
- private:
-  const DerivableFunction *argument_;
+class Cos : public UnaryFunction {
  public:
   explicit Cos(const DerivableFunction *argument);
+  double Evaluate(double) const override;
   string ToString() const override;
   DerivableFunction *Derive() const override;
-  double Evaluate(double d) const override;
+ protected:
+  UnaryFunction *NewInstance(const DerivableFunction *function) const override;
 };
 
 #endif //SYDERCAL_COS_H

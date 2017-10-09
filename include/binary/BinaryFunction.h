@@ -1,7 +1,7 @@
 #ifndef SYDERCAL_BINARYFUNCTION_H
 #define SYDERCAL_BINARYFUNCTION_H
 
-#include "DerivableFunction.h"
+#include "../DerivableFunction.h"
 
 class BinaryFunction : public DerivableFunction {
  protected:
