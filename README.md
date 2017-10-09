@@ -43,5 +43,5 @@ auto *funcOperator = *new Exp(new X()) - new X();
 - [x] 0 + x = x + 0 = x
 - [x] x - 0 = x
 - [x] 1 * x = x * 1 = x
-- [ ] x / 1 = x
+- [x] x / 1 = x
 - [ ] x * x = x^2

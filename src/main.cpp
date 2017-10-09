@@ -62,7 +62,7 @@ int main() {
   cout << "s2(x) = " << (string) *func6 << " = " << (string) *func6->Simplify() << endl;
 
   // simplify test 2
-  auto *func7 = (new Const(0))->Mul(new X())->Mul(new Const(1));
+  auto *func7 = (new Const(0))->Mul(new X())->Mul(new Const(1))->Div(new Const(1));
   cout << "s3(x) = " << (string) *func7 << " = " << (string) *func7->Simplify() << endl;
 
   auto *func8 = (new Const(1))->Add((new Const(1))->Mul(new X())->Mul(new Const(0)));

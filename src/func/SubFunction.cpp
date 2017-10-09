@@ -26,7 +26,7 @@ DerivableFunction *SubFunction::Simplify() const {
   // simplification x - 0 = x
   auto *con_right = dynamic_cast<Const *> (sim_right);
   if (con_right != nullptr) {
-    auto value = con_right->Evaluate(0);
+    auto value = (*con_right)(0);
     if (value == 0) {
       return sim_left;
     }
