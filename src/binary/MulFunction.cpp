@@ -1,7 +1,7 @@
-#include "../../include/func/MulFunction.h"
+#include "../../include/binary/MulFunction.h"
 #include "../../include/Const.h"
 #include "../../include/X.h"
-#include "../../include/func/PowFunction.h"
+#include "../../include/binary/PowFunction.h"
 
 MulFunction::MulFunction(const DerivableFunction *left, const DerivableFunction *right) :
     BinaryFunction(left, right) {

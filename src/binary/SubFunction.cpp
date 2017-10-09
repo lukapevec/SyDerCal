@@ -1,4 +1,4 @@
-#include "../../include/func/SubFunction.h"
+#include "../../include/binary/SubFunction.h"
 #include "../../include/Const.h"
 
 SubFunction::SubFunction(const DerivableFunction *left, const DerivableFunction *right) :

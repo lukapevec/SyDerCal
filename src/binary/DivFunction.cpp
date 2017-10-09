@@ -1,4 +1,4 @@
-#include "../../include/func/DivFunction.h"
+#include "../../include/binary/DivFunction.h"
 #include "../../include/Const.h"
 
 DivFunction::DivFunction(const DerivableFunction *left, const DerivableFunction *right) :

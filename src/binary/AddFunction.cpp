@@ -1,4 +1,4 @@
-#include "../../include/func/AddFunction.h"
+#include "../../include/binary/AddFunction.h"
 #include "../../include/Const.h"
 
 AddFunction::AddFunction(const DerivableFunction *left, const DerivableFunction *right) :

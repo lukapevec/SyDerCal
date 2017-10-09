@@ -1,4 +1,4 @@
-#include "../include/BinaryFunction.h"
+#include "../../include/binary/BinaryFunction.h"
 
 BinaryFunction::BinaryFunction(const DerivableFunction *left, const DerivableFunction *right) :
     left_(left), right_(right) {
