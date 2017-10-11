@@ -36,22 +36,23 @@ int main() {
   auto &func3 = (*new Sin(*new X())) / (*new X());
   cout << "h(x) = " << (string) func3 << endl;
   cout << "h(0) = " << func3(0) << endl;
-  cout << "h(pi/2) = " << func3(M_PI / 2) << endl;
+  cout << "h(x->0) = " << func3.Limit(0) << endl;
+  cout << "h(pi/2) = " << func3(M_PI_2) << endl;
   auto &d_func3 = func3.Derive();
   cout << "h'(x) = " << (string) d_func3 << " = " << (string) d_func3.Simplify() << endl;
   cout << "h'(0) = " << d_func3(0) << endl;
-  cout << "h'(pi/2) = " << d_func3(M_PI / 2) << endl;
+  cout << "h'(pi/2) = " << d_func3(M_PI_2) << endl;
   cout << endl;
 
   // pow() operation test
   auto &func4 = (*new X()) ^(*new Const(3));
   cout << "k(x) = " << (string) func4 << endl;
   cout << "k(0) = " << func4(0) << endl;
-  cout << "k(pi/2) = " << func4(M_PI / 2) << endl;
+  cout << "k(pi/2) = " << func4(M_PI_2) << endl;
   auto &d_func4 = func4.Derive();
   cout << "k'(x) = " << (string) d_func4 << endl;
   cout << "k'(0) = " << d_func4(0) << endl;
-  cout << "k'(pi/2) = " << d_func4(M_PI / 2) << endl;
+  cout << "k'(pi/2) = " << d_func4(M_PI_2) << endl;
   cout << endl;
 
   // simplify test 1

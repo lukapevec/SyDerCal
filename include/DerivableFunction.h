@@ -2,6 +2,7 @@
 #define SYDERCAL_DERIVABLEFUNCTION_H
 
 #include<string>
+#include "auxilliary/LimitSide.h"
 using namespace std;
 
 class DerivableFunction {
@@ -15,6 +16,7 @@ class DerivableFunction {
   explicit operator string() const;
   virtual double Evaluate(double) const = 0;
   double operator()(double) const;
+  double Limit(double, LimitSide=AVG) const;
   virtual DerivableFunction &Simplify() const;
   DerivableFunction &Add(const DerivableFunction &) const;
   DerivableFunction &operator+(const DerivableFunction &) const;

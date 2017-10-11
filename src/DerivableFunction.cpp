@@ -1,3 +1,6 @@
+#include <cfloat>
+#include <cmath>
+
 #include "../include/DerivableFunction.h"
 #include "../include/binary/AddFunction.h"
 #include "../include/binary/MulFunction.h"
@@ -51,6 +54,22 @@ DerivableFunction &DerivableFunction::Pow(const DerivableFunction &other) const 
 
 DerivableFunction &DerivableFunction::operator^(const DerivableFunction &other) const {
   return Pow(other);
+}
+
+double DerivableFunction::Limit(double value, LimitSide limit) const {
+  auto epsilon = DBL_EPSILON;
+  auto leftSide = Evaluate(value - epsilon);
+  auto rightSide = Evaluate(value + epsilon);
+  switch (limit) {
+    case LEFT:
+      return leftSide;
+    case RIGHT:
+      return rightSide;
+    case AVG:
+      return leftSide / 2 + rightSide / 2;
+    default:
+      return NAN;
+  }
 }
 
 DerivableFunction &DerivableFunction::Simplify() const {

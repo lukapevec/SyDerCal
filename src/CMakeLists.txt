@@ -15,5 +15,5 @@ set(SOURCE_FILES main.cpp
         binary/SubFunction.cpp ../include/binary/SubFunction.h
         binary/DivFunction.cpp ../include/binary/DivFunction.h
         binary/PowFunction.cpp ../include/binary/PowFunction.h
-        binary/BinaryFunction.cpp ../include/binary/BinaryFunction.h unary/UnaryFunction.cpp ../include/unary/UnaryFunction.h nullary/NullaryFunction.cpp ../include/nullary/NullaryFunction.h)
+        binary/BinaryFunction.cpp ../include/binary/BinaryFunction.h unary/UnaryFunction.cpp ../include/unary/UnaryFunction.h nullary/NullaryFunction.cpp ../include/nullary/NullaryFunction.h ../include/auxilliary/LimitSide.h)
 add_executable(SyDerCal ${SOURCE_FILES})
