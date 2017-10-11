@@ -5,13 +5,13 @@
 
 class AddFunction : public BinaryFunction {
  public:
-  AddFunction(const DerivableFunction *, const DerivableFunction *);
+  AddFunction(const DerivableFunction &, const DerivableFunction &);
   double Evaluate(double) const override;
   string ToString() const override;
-  DerivableFunction *Derive() const override;
-  DerivableFunction *Simplify() const override;
+  DerivableFunction & Derive() const override;
+  DerivableFunction &Simplify() const override;
  protected:
-  BinaryFunction *NewInstance(const DerivableFunction *, const DerivableFunction *) const override;
+  BinaryFunction &NewInstance(const DerivableFunction &, const DerivableFunction &) const override;
 };
 
 #endif //SYDERCAL_ADDFUNCTION_H

@@ -3,13 +3,12 @@
 
 #include "../DerivableFunction.h"
 
-class NullaryFunction : public DerivableFunction{
+class NullaryFunction : public DerivableFunction {
  protected:
   explicit NullaryFunction() = default;
-  virtual NullaryFunction *NewInstance() const = 0;
-  ~NullaryFunction() override = default ;
+  ~NullaryFunction() override = default;
  public:
-  virtual DerivableFunction *Simplify() const override;
+  virtual DerivableFunction &Simplify() const override;
 };
 
 #endif //SYDERCAL_NULLARYFUNCTION_H

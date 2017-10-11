@@ -6,12 +6,12 @@
 
 class Sin : public UnaryFunction {
  public:
-  explicit Sin(const DerivableFunction *argument);
+  explicit Sin(const DerivableFunction &argument);
   string ToString() const override;
-  DerivableFunction *Derive() const override;
+  DerivableFunction &Derive() const override;
   double Evaluate(double) const override;
  protected:
-  UnaryFunction *NewInstance(const DerivableFunction *) const override;
+  UnaryFunction &NewInstance(const DerivableFunction &) const override;
 };
 
 #endif //SYDERCAL_SIN_H

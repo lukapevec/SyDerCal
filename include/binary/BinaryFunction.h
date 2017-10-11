@@ -5,13 +5,13 @@
 
 class BinaryFunction : public DerivableFunction {
  protected:
-  const DerivableFunction *left_;
-  const DerivableFunction *right_;
-  BinaryFunction(const DerivableFunction *, const DerivableFunction *);
-  virtual BinaryFunction *NewInstance(const DerivableFunction *, const DerivableFunction *) const = 0;
+  const DerivableFunction &left_;
+  const DerivableFunction &right_;
+  BinaryFunction(const DerivableFunction &, const DerivableFunction &);
+  virtual BinaryFunction &NewInstance(const DerivableFunction &, const DerivableFunction &) const = 0;
   ~BinaryFunction() override;
  public:
-  virtual DerivableFunction *Simplify() const override;
+  virtual DerivableFunction &Simplify() const override;
 };
 
 #endif //SYDERCAL_BINARYFUNCTION_H

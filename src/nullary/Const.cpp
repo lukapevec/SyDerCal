@@ -1,6 +1,6 @@
 #include <sstream>
 
-#include "../../include/unary/Const.h"
+#include "../../include/nullary/Const.h"
 
 using namespace std;
 
@@ -12,12 +12,10 @@ string Const::ToString() const {
   return oss.str();
 }
 
-DerivableFunction *Const::Derive() const {
-  return new Const(0);
+DerivableFunction &Const::Derive() const {
+  return *new Const(0);
 }
 
 double Const::Evaluate(double) const {
   return argument_;
 }
-
-

@@ -5,12 +5,12 @@
 
 class UnaryFunction : public DerivableFunction {
  protected:
-  const DerivableFunction *argument_;
-  explicit UnaryFunction(const DerivableFunction *);
-  virtual UnaryFunction *NewInstance( const DerivableFunction *) const = 0;
+  const DerivableFunction &argument_;
+  explicit UnaryFunction(const DerivableFunction &);
+  virtual UnaryFunction &NewInstance(const DerivableFunction &) const = 0;
   ~UnaryFunction() override;
  public:
-  virtual DerivableFunction *Simplify() const override;
+  virtual DerivableFunction &Simplify() const override;
 };
 
 #endif //SYDERCAL_UNARYFUNCTION_H

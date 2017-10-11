@@ -9,7 +9,7 @@ set(SOURCE_FILES main.cpp
         unary/Exp.cpp ../include/unary/Exp.h
         binary/MulFunction.cpp ../include/binary/MulFunction.h
         nullary/X.cpp ../include/nullary/X.h
-        unary/Const.cpp ../include/unary/Const.h
+        nullary/Const.cpp ../include/nullary/Const.h
         unary/Sin.cpp ../include/unary/Sin.h
         unary/Cos.cpp ../include/unary/Cos.h
         binary/SubFunction.cpp ../include/binary/SubFunction.h
