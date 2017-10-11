@@ -7,6 +7,7 @@ using namespace std;
 class DerivableFunction {
  protected:
   DerivableFunction() = default;
+  mutable bool isReferenced__;
  public:
   virtual ~DerivableFunction() = default;
   virtual DerivableFunction *Derive() const = 0;

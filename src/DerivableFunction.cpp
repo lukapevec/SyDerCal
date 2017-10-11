@@ -56,4 +56,3 @@ DerivableFunction *DerivableFunction::operator^(const DerivableFunction *other) 
 DerivableFunction *DerivableFunction::Simplify() const {
   return const_cast<DerivableFunction *>(this);
 }
-
