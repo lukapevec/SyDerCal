@@ -13,7 +13,9 @@ using namespace std;
 int main() {
   // first set of functions
   auto &func1 = *new Exp(*new X()) * *new X() - *new Sin(*new X());
-  auto &func2 = (*new Exp(*new X())).Mul(*new X()).Sub(*new Sin(*new X()));
+  // another way how to write it
+  // auto &func2 = (*new Exp(*new X())).Mul(*new X()).Sub(*new Sin(*new X()));
+  auto &func2 = *new Exp(*new X()) * *new X() * *new Sin(*new X());
   cout << "f(x) = " << func1.ToString() << endl;
   cout << "g(x) = " << (string) func2 << endl;
   cout << "f(0) = " << func1.Evaluate(0) << endl;

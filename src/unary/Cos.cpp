@@ -10,7 +10,7 @@ string Cos::ToString() const {
 
 // (cos(x))' = -sin(x)
 DerivableFunction &Cos::Derive() const {
-  return (*new Const(-1.0)).Mul(*new Sin(argument_));
+  return (*new Const(-1.0)).Mul(*new Sin(argument_)).Mul(argument_.Derive());
 }
 
 double Cos::Evaluate(double d) const {
